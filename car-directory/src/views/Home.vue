@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="Welcome to Your Car Directory"/>
   </div>
 </template>
 
@@ -13,6 +13,13 @@ export default {
   name: 'Home',
   components: {
     HelloWorld
+  },
+
+  mounted() {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+
+</style>
