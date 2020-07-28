@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h1>Create car</h1>
         
     </div>
 </template>

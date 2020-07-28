@@ -55,6 +55,10 @@ class Car {
     getPrice() {
         return this.price
     }
+
+    save() {
+        
+    }
 }
 
 export default Car
