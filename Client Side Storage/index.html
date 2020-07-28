@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Client Side Storage</title>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -25,6 +26,54 @@
 </body>
 
 <script>
+
+
+class Cat {
+
+  constructor(nom, race) {
+    this.nom = nom
+    this.race = race
+
+    this.jumpTime = 0
+  }
+
+  sauter() {
+    this.jumpTime += 1
+    return this.toString() + ' a sauté'
+  }
+
+  getJumpTime() {
+    return this.jumpTime
+  }
+
+  setNom(nom) {
+    this.nom = nom
+  }
+
+  setRace(race) {
+    this.race = race
+  }
+
+  toString() {
+    return 'mon chat ' + this.nom + ' ' + this.race
+  }
+
+}
+
+let newCat1 = new Cat('remi', 'chartreux')
+let newCat2 = new Cat('camille', 'mainkoon')
+ 
+console.log(newCat1.toString(), newCat2.toString())
+console.log(newCat1.sauter())
+console.log(newCat1.sauter())
+console.log(newCat1.sauter())
+console.log(newCat1.getJumpTime(), newCat2.getJumpTime())
+
+
+
+
+/*
+
 const app = new Vue({
   el: '#app',
   data: {
@@ -61,6 +110,8 @@ const app = new Vue({
     }
   }
 })
+
+*/
 </script>
 
 </html>

@@ -10,7 +10,7 @@
 <body>
   <div id="app">
     <h1>Bitcoin Price Index</h1>
-  
+    <button @click="loadData()">Load data</button>
     <section v-if="errored">
       <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
     </section>
@@ -36,7 +36,7 @@
 <script>
 new Vue({
   el: '#app',
-  data () {
+  data() {
     return {
       info: null,
       loading: true,
@@ -48,8 +48,11 @@ new Vue({
     return value.toFixed(2)
   }
 },
-  mounted () {
-    axios
+
+methods: {
+
+ loadData() {
+  axios
       .get('https://api.coindesk.com/v1/bpi/currentprice.json')
       .then(response => {
         this.info = response.data.bpi
@@ -59,6 +62,14 @@ new Vue({
         this.errored = true
       })
       .finally(() => this.loading = false)
+ }
+
+
+
+},
+
+  mounted () {
+    
   }
 })
 </script>
