@@ -9,6 +9,21 @@ Vue.use(VueRouter)
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/car-detail/:id',
+    name: 'CarDetail',
+    component: () => import('./../views/CarDetail.vue')
+  },
+  {
+    path: '/car-create',
+    name: 'CarCreate',
+    component: () => import('./../views/CarCreate.vue')
+  },
+  {
+    path: '/car-update/:id',
+    name: 'CarUpdate',
+    component: () => import('./../views/CarUpdate.vue')
   }
 ]
 
