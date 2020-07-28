@@ -4,6 +4,21 @@
   </div>
 </template>
 
+<script>
+import Vue from 'vue'
+import Car from './services/Car.js'
+
+export default Vue.extend({
+  
+  mounted() {
+
+    let newCar = new Car('AMG GT-R', 2020, 'AMG LINE', 800, 150000)
+    
+  }
+
+})
+</script>
+
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
