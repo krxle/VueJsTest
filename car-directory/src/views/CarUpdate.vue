@@ -1,6 +1,6 @@
 <template>
     <div>
-        
+        <h2>Update car</h2>    
     </div>
 </template>
 
